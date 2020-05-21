@@ -1,0 +1,55 @@
+//数组A转为数组B
+
+//根据同一key值，组成新的数组
+
+var ArrA=[安全" },
+    {region: "B", name: "白色" },
+    {region: "B", name: "白板" },
+    {region: "C", name: "残血" },
+    {region: "C", name: "残影" }
+   ]
+//   var ArrB: [{id: "1", region: "B", items: [
+                  {  name: "白色" },
+                  {  name: "白板" },
+                ]}, { 
+              id: "2", region: "C", items: [
+                { name: "残血" },
+                 {name: "残影" }
+              ]  
+          }, 
+         ]
+=======================================================
+var list=[
+            {region: "A", name: "安诚" },
+            {region: "B", name: "安涛" },
+            {region: "B", name: "安慕" },
+            {region: "C", name: "残血" },
+            {region: "C", name: "残血" }
+           ]
+           var jmap = {};
+           var result = [];
+           list.forEach(function(item){
+              var key = item.region;
+              if(typeof jmap[key] ==="undefined"){
+                jmap[key] = [];
+              }
+              jmap[key].push(item);
+           })
+           var keys = Object.keys(jmap);
+           for (var i = 0; i < keys.length;i++){
+             let item = {
+               name:keys[i],
+               data:jmap[keys[i]]
+             };
+             result.push(item);
+            //  return result;
+           };
+
+           console.log("result:",result)
+           
+ ***********************************************************************************************************************
+         
+         
+         
+         
+         
